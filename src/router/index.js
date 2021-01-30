@@ -2,12 +2,23 @@ import { createRouter, createWebHistory } from "@ionic/vue-router";
 
 const routes = [
   {
-    path: "",
-    redirect: "/folder/Inbox",
+    path: "/",
+    redirect: "/calculator",
   },
   {
-    path: "/folder/:id",
-    component: () => import("../views/Folder.vue"),
+    path: "/calculator",
+    name: "Calculator",
+    component: () => import("../pages/CalculatorPage.vue"),
+  },
+  {
+    path: "/instructions",
+    name: "Instructions",
+    component: () => import("../pages/InstructionsPage.vue"),
+  },
+  {
+    path: "/bmichart",
+    name: "BMI Chart",
+    component: () => import("../pages/BMIChartPage.vue"),
   },
 ];
 
