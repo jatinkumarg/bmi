@@ -10,11 +10,7 @@ const routes = [
     name: "Calculator",
     component: () => import("../pages/CalculatorPage.vue"),
   },
-  {
-    path: "/instructions",
-    name: "Instructions",
-    component: () => import("../pages/InstructionsPage.vue"),
-  },
+
   {
     path: "/bmichart",
     name: "BMI Chart",

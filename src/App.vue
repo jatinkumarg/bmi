@@ -4,9 +4,21 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>BMI</ion-list-header>
-            <ion-note>Health companion</ion-note>
-
+            <ion-list-header
+              ><img
+                class="mr-1 mb-1 h-10 w-10 rounded-full"
+                src="./assests/BMI.png"
+                alt=""/><span class="pb-2"></span
+            ></ion-list-header>
+            <ion-note class="ml-1">Health companion</ion-note>
+            <div class="mt-2 mb-6 relative">
+              <div
+                class="absolute inset-0 flex items-center"
+                aria-hidden="true"
+              >
+                <div class=" ml-4 mr-4 w-full border-t border-gray-600"></div>
+              </div>
+            </div>
             <ion-menu-toggle
               auto-hide="false"
               v-for="(p, i) in appPages"
@@ -86,6 +98,10 @@ import {
   trashSharp,
   warningOutline,
   warningSharp,
+  listOutline,
+  barChartSharp,
+  calculatorOutline,
+  calculatorSharp,
 } from "ionicons/icons";
 
 export default defineComponent({
@@ -110,20 +126,14 @@ export default defineComponent({
       {
         title: "BMI Calculator",
         url: "/calculator",
-        iosIcon: heartOutline,
-        mdIcon: heartSharp,
-      },
-      {
-        title: "Instructions",
-        url: "/instructions",
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp,
+        iosIcon: calculatorOutline,
+        mdIcon: calculatorSharp,
       },
       {
         title: "BMI Chart",
         url: "/bmichart",
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp,
+        iosIcon: listOutline,
+        mdIcon: barChartSharp,
       },
     ];
     const labels = ["Family"];
@@ -155,6 +165,10 @@ export default defineComponent({
       trashSharp,
       warningOutline,
       warningSharp,
+      listOutline,
+      barChartSharp,
+      calculatorOutline,
+      calculatorSharp,
       isSelected: route.path ? "selected" : "",
     };
   },
